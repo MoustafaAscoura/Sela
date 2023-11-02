@@ -1,14 +1,17 @@
 :root {
     --text-2 : #4c4c4c;
     --text: #1f1f1f;
+    --text-600: #666666;
     --primary-700 : #155177;
     --primary-600 : #3F708F;
     --secondary: #F8BA10;
     --bg: #f4f4f4;
+    --bg-dark: #061723;
 }
 
 .container {
     max-width: 1240px;
+    padding: 0;
 }
 
 * {
@@ -17,6 +20,38 @@
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
 }
+
+body {
+    background-color: var(--bg);
+}
+
+main {
+    overflow-x: hidden;
+    position: relative;
+}
+
+main > div > .title {
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 32px;
+    position: relative;
+}
+
+main > div > .subtitle {
+    font-size: 18px;
+    font-weight:400;
+    color: var(--text-2);
+}
+
+main > div button.btn {
+    background-color: var(--primary-600);
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Nav bar */
+
 
 .nav-item * {
     color: var(--primary-700) !important;
@@ -33,16 +68,16 @@
 
 nav.navbar {
     box-shadow: 0 2px 25px 0 rgb(0,0,0,0.16);
-    background-color: var(--bg);
 }
+
+
 
 /* Landing Section */
-.vector {
+.landing .vector {
     background-color: #DFE7EC;
-}
-
-.landing div{
-    padding-top: 96px;
+    width: 694px;
+    height: 324px;
+    z-index: -1;
 }
 
 .landing h1 span {
@@ -52,9 +87,6 @@ nav.navbar {
 .landing button {
     width: 185px;
     height: 48px;
-    background-color: var(--primary-600);
-    color: white;
-    font-size: 18px;
     margin-top: 16px;
     margin-bottom: 32px;
 }
@@ -64,25 +96,12 @@ nav.navbar {
     color: var(--text-2);
 }
 
-.landing img {
+.landing .row img {
     max-width: 600px;
     max-height: 486px;
 }
 
-main > div > .title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    line-height: 40px;
-    font-size: 32px;
-    position: relative;
-}
 
-main > div > .subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight:400;
-    color: var(--text-2);
-}
 
 .services .title::before {
     content: "";
@@ -108,11 +127,12 @@ main > div > .subtitle {
 }
 
 .services button {
-    font-size: 18px;
-    color: white;
-    background-color: var(--secondary);
     width: 185px;
     height: 48px;
+}
+/* Publish Section */
+.publish {
+    padding: 40px 0;
 }
 
 .publish .title::before {
@@ -126,7 +146,6 @@ main > div > .subtitle {
     border-radius: 15%;
 }
 
-/* Publish Section */
 
 .publish ol {
     list-style: none;
@@ -166,10 +185,210 @@ main > div > .subtitle {
 }
 
 .publish button {
-    font-size: 18px;
-    color: white;
     background-color: var(--primary-700);
     width: 185px;
     height: 48px;
     margin-left: 70px;
+}
+
+/* Testimonials Section */
+.testimonial {
+    margin-top: 56px;
+    margin-bottom: 56px;
+}
+
+.testimonial .title::before {
+    content: "";
+    border-bottom: 4px solid #F8BA10;
+    position: absolute;
+    bottom: 0;
+    width: 326px;
+    right: 50%;
+    content: "";
+    z-index: -1;
+    border-radius: 15%;
+    bottom: -7px;
+}
+
+.testimonial .cards {
+    position: absolute;
+    left: -52px;
+}
+
+.testimonial .card {
+    background-color: white;
+    height: 262px;
+    width: 495px;
+    border-radius: 20px;
+    margin: 12px;
+    padding: 12px;
+}
+
+.testimonial .card .text {
+    margin: 27px 19px 20px 0;
+}
+.testimonial .card img{
+    height: 70px;
+    width: 70px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.testimonial h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.testimonial h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--text-2);
+}
+
+.testimonial p.comment {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    color: var(--text);
+    margin-top: 14px;
+}
+
+.testimonial p.metainfo {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--text-2);
+    margin-top: 9px;
+
+}
+
+.testimonial .col.active {
+    position: relative;
+    bottom: 24px;
+}
+
+.testimonial .paginator {
+    margin-top: 405px;
+}
+
+.testimonial .paginator button {
+    margin: 0 48px;
+    border: 1px solid var(--text);
+    width: 48px;
+    height: 48px;
+}
+
+.testimonial .paginator .indicator {
+    width: 45px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--text-600);
+    margin: 16px;
+}
+
+.testimonial .paginator .indicator.active {
+    background-color: var(--text);
+}
+
+/* Access Section */
+
+.access {
+    padding-top: 17px;
+    margin-bottom: 120px;
+}
+
+
+.access .title::before {
+    content: "";
+    border-bottom: 4px solid #F8BA10;
+    position: absolute;
+    width: 453px;
+    content: "";
+    z-index: -1;
+    border-radius: 15%;
+    bottom: -7px;
+    margin-top: 12px;
+}
+
+.access img {
+    width: 628px;
+    height: 511px;
+    padding: 16px;
+}
+
+.access p {
+    color: var(--text-2);
+    font-size: 20;
+    text-align: center;
+    line-height: 24px;
+    width: 534px;
+    margin: 16px;
+}
+
+.access button {
+    background-color: var(--primary-700);
+    width: 197px;
+    height: 56px;
+    margin: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--bg);
+}
+
+footer .logo {
+    width: 105px;
+    height: 68px;
+    margin: 32px 0;
+}
+
+footer .brands img {
+    width: 24px;
+    height: 24px;
+}
+
+footer img.app {
+    width: 186px;
+    height: 55px;
+}
+
+footer h4 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 105px 0 24px 0;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+footer .row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer > div:last-child {
+    min-height: 64px;
+    border-top: 1px solid var(--bg);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
 }

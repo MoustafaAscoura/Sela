@@ -10,7 +10,7 @@
 }
 
 .container {
-    max-width: 1240px;
+    max-width: 1224px;
     padding: 0;
 }
 
@@ -23,6 +23,7 @@
 
 body {
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 main {
@@ -212,7 +213,7 @@ nav.navbar {
 
 .testimonial .cards {
     position: absolute;
-    left: -52px;
+    left: -5vw;
 }
 
 .testimonial .card {
@@ -269,6 +270,7 @@ nav.navbar {
 .testimonial .col.active {
     position: relative;
     bottom: 24px;
+    z-index: 5;
 }
 
 .testimonial .paginator {
@@ -318,6 +320,7 @@ nav.navbar {
     width: 628px;
     height: 511px;
     padding: 16px;
+    z-index: 1;
 }
 
 .access p {

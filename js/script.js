@@ -12,6 +12,11 @@ window.onload = () => {
             console.log(curr,icon)
         }
     }
+
+    document.querySelector('li.nav-item.theme').onclick = (e) => {
+        document.body.classList.toggle('dark')
+    }
+
     AOS.init({
         easing: 'ease-in-quad',
       });

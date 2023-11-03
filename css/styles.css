@@ -29,6 +29,7 @@ body {
 main {
     overflow-x: hidden;
     position: relative;
+    padding-top: 67px;
 }
 
 main > div > .title {
@@ -53,6 +54,11 @@ main > div button.btn {
 
 /* Nav bar */
 
+nav {
+    position: fixed !important;
+    width: 100%;
+    z-index: 10;
+}
 
 .nav-item * {
     color: var(--primary-700) !important;
@@ -71,6 +77,10 @@ nav.navbar {
     box-shadow: 0 2px 25px 0 rgb(0,0,0,0.16);
 }
 
+nav li.nav-item {
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* Landing Section */
